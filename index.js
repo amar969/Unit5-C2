@@ -10,11 +10,15 @@ async function getData(){
     let API_KEY = "09cfa5ea3bfe583999b646646dc2a656";
     let url = "https://api.openweathermap.org/data/2.5/weather";
 
+    try{
     let res = await fetch(`${url}?q=${sInput}&appid=${API_KEY}&units=metric`)
     let data = await res.json()
     console.log(data);
     return data;
-
+    }
+    catch(err){
+        console.log(err);
+    }
 }
 
 let searchResult = document.getElementById("search-result");
@@ -44,11 +48,11 @@ function displayData(weatherData){
 
     //sunrise
     let sunrise = document.createElement("p");
-    sunrise.innerHTML = "Sunrise at:- " + weatherData.sys.sunrise;
+    sunrise.innerHTML = "Sunrise at:- " + new Date (weatherData.sys.sunrise).toLocaleTimeString();
 
     //sunset
     let sunset = document.createElement("p");
-    sunset.innerHTML = "Sunset:- " + weatherData.sys.sunset;
+    sunset.innerHTML = "Sunset:- " + new Date(weatherData.sys.sunset).toLocaleTimeString();
 
     //windspeed 
     let windspeed = document.createElement("p");
