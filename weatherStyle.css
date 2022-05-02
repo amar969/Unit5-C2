@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navbar{
+    display: flex;
+    outline: none;
+    border-radius: 10px;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 20px;
+    width: 96%;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
+}
+
+input{
+    outline: none;
+    border: none;
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+button{
+    width: 10%;
+    border: none;
+    padding: 10px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+}
+
+/* weather search result */
+
+#search-result{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 96%;
+    height: 250px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
+    justify-content: space-between;
+    margin: 20px;    
+    top: 180px;
+    padding: 20px;
+    column-gap: 20px;
+}
